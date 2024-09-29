@@ -1,0 +1,26 @@
+program tugassuhu;
+uses crt;
+var 
+suhu, hasil : real; 
+konv : integer;
+begin
+clrscr;
+    writeln('1. Celsius ke Fahrenheit');
+    writeln('2. Fahrenheit ke Celsius');
+    writeln('3. Celsius ke Kelvin');
+    writeln('4. Kevin ke Celsius');
+    write('Pilih jenis konversi yang ingin kamu gunakan : '); readln(konv);
+    write('Masukkan nilai suhu : '); readln(suhu);
+
+    if (konv = 1) then
+        hasil := (suhu * 9 / 5) + 32
+    else if (konv = 2) then
+        hasil := (suhu - 32) * 5 / 9
+    else if (konv = 3) then
+        hasil := suhu + 273
+    else if (konv = 4) then
+        hasil := suhu - 273
+    else
+        writeln('Hasil tidak terdefinisi');
+    writeln ('Hasil konversinya adalah : ', hasil:5:3);
+end.
